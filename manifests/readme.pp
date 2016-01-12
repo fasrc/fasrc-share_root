@@ -8,9 +8,9 @@ define share_root::readme (
   $path        = undef,
   $size        = undef,
   $ticket      = 'n/a',
-  $owner = 'root',
-  $group = 'root',
-  $mode = '0644',
+  $owner       = 'root',
+  $group       = 'root',
+  $mode        = '0644',
 
 ) {
   file { "${path}/share_root" :
