@@ -3,7 +3,7 @@
 # README.yaml files from a template
 #
 define share_root::readme (
-  $date        = generate('/bin/date', '+%Y-%d-%m'),
+  $date        = strftime("%Y-%m-%d"),
   $description = 'a new share',
   $path        = undef,
   $size        = undef,
