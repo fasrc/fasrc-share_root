@@ -13,12 +13,16 @@ define share_root::readme (
   $mode        = '0644',
 
 ) {
-  file { "${path}/share_root" :
-    ensure  => directory,
-    owner   => $owner,
-    group   => $group,
-    mode    => $mode,
-  }
+  ensure_resource(
+    file,
+    "${path}/share_root",
+    {
+      'ensure' => 'directory',
+      'owner'  => $owner,
+      'group'  => $group,
+      'mode'   => $mode,
+    }
+  )
 
   file { "${path}/README.yaml" :
     ensure  => present,
