@@ -30,6 +30,6 @@ define share_root::readme (
     group   => 'root',
     mode    => '0644',
     content => template('share_root/readme.yaml.erb'),
-    require => File[$path],
+    require => File["${path}/share_root"],
   }
 }
