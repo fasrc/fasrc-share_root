@@ -17,10 +17,11 @@ define share_root::readme (
     file,
     "${path}/share_root",
     {
-      'ensure' => 'directory',
-      'owner'  => $owner,
-      'group'  => $group,
-      'mode'   => $mode,
+      'ensure'  => 'directory',
+      'owner'   => $owner,
+      'group'   => $group,
+      'mode'    => $mode,
+      'require' => "Mount["${path}"]",
     }
   )
 
