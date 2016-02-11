@@ -21,7 +21,7 @@ define share_root::readme (
       'owner'   => $owner,
       'group'   => $group,
       'mode'    => $mode,
-      'require' => 'Mount["${path}"]',
+      'require' => Mount["${path}"],
     }
   )
 
